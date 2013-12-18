@@ -82,7 +82,9 @@
 #endif
 
 #define BOTAN_TARGET_CPU_IS_LITTLE_ENDIAN
+#if !defined(__arm__)
 #define BOTAN_TARGET_CPU_IS_X86_FAMILY
+#endif
 #define BOTAN_TARGET_UNALIGNED_MEMORY_ACCESS_OK 1
 
 #if defined(BOTAN_TARGET_CPU_IS_LITTLE_ENDIAN) || \
